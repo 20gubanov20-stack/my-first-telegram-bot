@@ -1,3 +1,4 @@
+import os
 import logging
 import random
 import sqlite3  # 👈 Подключаем базу данных (она встроена в Python)
@@ -9,8 +10,7 @@ from telegram.ext import (
 )
 
 # ⚠️ ВСТАВЬ СЮДА СВОЙ НОВЫЙ ТОКЕН (после /revoke у BotFather)
-TOKEN = "9289642214:AAG3mCo6zRlG8IoRAe4opoQ7QXNH-25CrWk"
-
+TOKEN = os.environ.get("BOT_TOKEN")
 logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s', level=logging.INFO)
 
 # --- ФУНКЦИИ ДЛЯ РАБОТЫ С БАЗОЙ ДАННЫХ ---
